@@ -73,20 +73,20 @@ function incendiumFlamegraph(id, data) {
       h("nav", {}, [
         h("div", {}, [
           h("div", { style: "float: left" }, [
-            h("a", { class: "incendium", href: downloadAction, id: downloaderId, style: styleSeparate }, ["Download"]),
-            h("a", { class: "incendium", href: resetZoomAction, style: styleSeparate }, ["Reset zoom"]),
-            h("a", { class: "incendium", href: clearAction, style: styleSeparate }, ["Clear"])
+            //h("a", { class: "incendium", href: downloadAction, id: downloaderId, style: styleSeparate }, ["Download"]),
+            //h("a", { class: "incendium", href: resetZoomAction, style: styleSeparate }, ["Reset zoom"]),
+            //h("a", { class: "incendium", href: clearAction, style: styleSeparate }, ["Clear"])
           ]),
           h("div", { style: "float: right" }, [
-            h("form", { class: "incendium", id: formId, style: "display: inline-block important!;" }, [
-              h("input", { class: "incendium", id: termId }, []),
-              h("a", { class: "incendium", style: "margin-left: 5px", href: searchAction }, ["Search"])
+            //h("form", { class: "incendium", id: formId, style: "display: inline-block important!;" }, [
+              //h("input", { class: "incendium", id: termId }, []),
+              //h("a", { class: "incendium", style: "margin-left: 5px", href: searchAction }, ["Search"])
             ])
           ])
         ])
       ]),
       h("div", { id: chartId }, []),
-      h("div", { id: detailsId }, [])
+      //h("div", { id: detailsId }, [])
     ]);
 
   // Insert the HTML just before the current script
