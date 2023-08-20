@@ -1,0 +1,1450 @@
+{
+    "children": [
+        {
+            "name": "runtime.goexit.abi0",
+            "value": 73347,
+            "children": [
+                {
+                    "name": "google.golang.org/grpc.(*Server).serveStreams.func1.2",
+                    "value": 73341,
+                    "children": [
+                        {
+                            "name": "google.golang.org/grpc.(*Server).handleStream",
+                            "value": 73341,
+                            "children": [
+                                {
+                                    "name": "google.golang.org/grpc.(*Server).processUnaryRPC",
+                                    "value": 73341,
+                                    "children": [
+                                        {
+                                            "name": "github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler",
+                                            "value": 73341,
+                                            "children": [
+                                                {
+                                                    "name": "go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1",
+                                                    "value": 73341,
+                                                    "children": [
+                                                        {
+                                                            "name": "github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1",
+                                                            "value": 73341,
+                                                            "children": [
+                                                                {
+                                                                    "name": "[m] /lib/ld-musl-x86_64.so.1 + 0x000495f0",
+                                                                    "value": 7,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "runtime.sigtramp.abi0",
+                                                                            "value": 7,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "runtime.sigtrampgo",
+                                                                                    "value": 7,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "runtime.sigfwdgo",
+                                                                                            "value": 1,
+                                                                                            "children": []
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "runtime.sighandler",
+                                                                                            "value": 6,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "runtime.doSigPreempt",
+                                                                                                    "value": 5,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "runtime.isAsyncSafePoint",
+                                                                                                            "value": 5,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "runtime.pcdatavalue2",
+                                                                                                                    "value": 2,
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "runtime.(*moduledata).textAddr",
+                                                                                                                            "value": 1,
+                                                                                                                            "children": []
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "name": "runtime.pcvalue",
+                                                                                                                            "value": 1,
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "name": "runtime.step",
+                                                                                                                                    "value": 1,
+                                                                                                                                    "children": []
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "runtime.findfunc",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": []
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "runtime.funcname",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "[m] /usr/src/app/productcatalogservice + 0x00404605",
+                                                                                                                            "value": 1,
+                                                                                                                            "children": []
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "name": "runtime.isAbortPC",
+                                                                                                    "value": 1,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "runtime.findfunc",
+                                                                                                            "value": 1,
+                                                                                                            "children": []
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "name": "main.(*productCatalog).ListProducts",
+                                                                    "value": 73329,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "runtime.asyncPreempt.abi0",
+                                                                            "value": 5,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "runtime.mcall",
+                                                                                    "value": 5,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "runtime.gopreempt_m",
+                                                                                            "value": 5,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "runtime.goschedImpl",
+                                                                                                    "value": 5,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "runtime.schedule",
+                                                                                                            "value": 4,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "runtime.gogo.abi0",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": []
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "runtime.execute",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "runtime.casgstatus",
+                                                                                                                            "value": 1,
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "name": "runtime.(*timeHistogram).record",
+                                                                                                                                    "value": 1,
+                                                                                                                                    "children": []
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "runtime.findRunnable",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": []
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "runtime.procyield.abi0",
+                                                                                                            "value": 1,
+                                                                                                            "children": []
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "[k] asm_common_interrupt",
+                                                                            "value": 1,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "[k] irqentry_exit_to_user_mode",
+                                                                                    "value": 1,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "[k] exit_to_user_mode_prepare",
+                                                                                            "value": 1,
+                                                                                            "children": []
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "[k] asm_sysvec_apic_timer_interrupt",
+                                                                            "value": 42,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "[k] irqentry_exit_to_user_mode",
+                                                                                    "value": 42,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "[k] exit_to_user_mode_prepare",
+                                                                                            "value": 42,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "[k] schedule",
+                                                                                                    "value": 26,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "[k] __schedule",
+                                                                                                            "value": 26,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "[k] finish_task_switch",
+                                                                                                                    "value": 26,
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "[k] put_task_stack",
+                                                                                                                            "value": 3,
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "name": "[k] account_kernel_stack",
+                                                                                                                                    "value": 3,
+                                                                                                                                    "children": []
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "name": "[k] arch_do_signal",
+                                                                                                    "value": 3,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "[k] get_signal",
+                                                                                                            "value": 2,
+                                                                                                            "children": []
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "[k] copy_fpstate_to_sigframe",
+                                                                                                            "value": 1,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "[k] copy_user_generic_unrolled",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": []
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "[k] asm_sysvec_reschedule_ipi",
+                                                                            "value": 14,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "[k] irqentry_exit_to_user_mode",
+                                                                                    "value": 14,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "[k] exit_to_user_mode_prepare",
+                                                                                            "value": 14,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "[k] arch_do_signal",
+                                                                                                    "value": 7,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "[k] get_signal",
+                                                                                                            "value": 5,
+                                                                                                            "children": []
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "[k] copy_fpstate_to_sigframe",
+                                                                                                            "value": 1,
+                                                                                                            "children": []
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "[k] copy_siginfo_to_user",
+                                                                                                            "value": 1,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "[k] _copy_to_user",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "[k] copy_user_generic_unrolled",
+                                                                                                                            "value": 1,
+                                                                                                                            "children": []
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "name": "[k] schedule",
+                                                                                                    "value": 1,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "[k] __schedule",
+                                                                                                            "value": 1,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "[k] finish_task_switch",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": []
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "[k] asm_sysvec_call_function_single",
+                                                                            "value": 33,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "[k] irqentry_exit_to_user_mode",
+                                                                                    "value": 33,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "[k] exit_to_user_mode_prepare",
+                                                                                            "value": 33,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "[k] schedule",
+                                                                                                    "value": 9,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "[k] __schedule",
+                                                                                                            "value": 8,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "[k] finish_task_switch",
+                                                                                                                    "value": 8,
+                                                                                                                    "children": []
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "name": "[m] /lib/ld-musl-x86_64.so.1 + 0x000495f9",
+                                                                    "value": 2,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "[k] entry_SYSCALL_64_after_hwframe",
+                                                                            "value": 2,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "[k] do_syscall_64",
+                                                                                    "value": 2,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "[k] __x64_sys_rt_sigreturn",
+                                                                                            "value": 2,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "[k] __set_current_blocked",
+                                                                                                    "value": 1,
+                                                                                                    "children": []
+                                                                                                },
+                                                                                                {
+                                                                                                    "name": "[k] restore_sigcontext",
+                                                                                                    "value": 1,
+                                                                                                    "children": []
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "name": "runtime.cgoSigtramp.abi0",
+                                                                    "value": 3,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "[k] asm_sysvec_reschedule_ipi",
+                                                                            "value": 2,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "[k] irqentry_exit_to_user_mode",
+                                                                                    "value": 2,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "[k] exit_to_user_mode_prepare",
+                                                                                            "value": 2,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "[k] arch_do_signal",
+                                                                                                    "value": 2,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "[k] signal_setup_done",
+                                                                                                            "value": 1,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "[k] __set_current_blocked",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": []
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "[k] fpu__clear",
+                                                                                                            "value": 1,
+                                                                                                            "children": []
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "runtime.gcBgMarkWorker",
+                    "value": 2,
+                    "children": [
+                        {
+                            "name": "runtime.systemstack.abi0",
+                            "value": 1,
+                            "children": [
+                                {
+                                    "name": "runtime.gcMarkDone.func1",
+                                    "value": 1,
+                                    "children": [
+                                        {
+                                            "name": "runtime.gcWriteBarrierCX",
+                                            "value": 1,
+                                            "children": [
+                                                {
+                                                    "name": "runtime.gcWriteBarrier",
+                                                    "value": 1,
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "runtime.gcMarkDone",
+                            "value": 1,
+                            "children": [
+                                {
+                                    "name": "runtime.systemstack.abi0",
+                                    "value": 1,
+                                    "children": [
+                                        {
+                                            "name": "runtime.gcMarkTermination.func4",
+                                            "value": 1,
+                                            "children": [
+                                                {
+                                                    "name": "runtime.forEachP",
+                                                    "value": 1,
+                                                    "children": [
+                                                        {
+                                                            "name": "runtime.gcMarkTermination.func4.1",
+                                                            "value": 1,
+                                                            "children": [
+                                                                {
+                                                                    "name": "runtime.(*mcache).prepareForSweep",
+                                                                    "value": 1,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "runtime.(*mcache).releaseAll",
+                                                                            "value": 1,
+                                                                            "children": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "google.golang.org/grpc.(*acBalancerWrapper).Connect.func2",
+                    "value": 2,
+                    "children": [
+                        {
+                            "name": "google.golang.org/grpc.(*addrConn).connect",
+                            "value": 2,
+                            "children": [
+                                {
+                                    "name": "google.golang.org/grpc.(*addrConn).resetTransport",
+                                    "value": 2,
+                                    "children": [
+                                        {
+                                            "name": "google.golang.org/grpc.(*addrConn).tryAllAddrs",
+                                            "value": 2,
+                                            "children": [
+                                                {
+                                                    "name": "google.golang.org/grpc.(*addrConn).createTransport",
+                                                    "value": 2,
+                                                    "children": [
+                                                        {
+                                                            "name": "google.golang.org/grpc/internal/transport.newHTTP2Client",
+                                                            "value": 2,
+                                                            "children": [
+                                                                {
+                                                                    "name": "net.(*TCPConn).Write",
+                                                                    "value": 1,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "net.(*conn).Write",
+                                                                            "value": 1,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "net.(*netFD).Write",
+                                                                                    "value": 1,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "internal/poll.(*FD).Write",
+                                                                                            "value": 1,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "syscall.write",
+                                                                                                    "value": 1,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "syscall.Syscall",
+                                                                                                            "value": 1,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "runtime/internal/syscall.Syscall6",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "[k] entry_SYSCALL_64_after_hwframe",
+                                                                                                                            "value": 1,
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "name": "[k] do_syscall_64",
+                                                                                                                                    "value": 1,
+                                                                                                                                    "children": [
+                                                                                                                                        {
+                                                                                                                                            "name": "[k] __x64_sys_write",
+                                                                                                                                            "value": 1,
+                                                                                                                                            "children": [
+                                                                                                                                                {
+                                                                                                                                                    "name": "[k] ftrace_trampoline",
+                                                                                                                                                    "value": 1,
+                                                                                                                                                    "children": [
+                                                                                                                                                        {
+                                                                                                                                                            "name": "[k] ftrace_ops_assist_func",
+                                                                                                                                                            "value": 1,
+                                                                                                                                                            "children": [
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "[k] kprobe_ftrace_handler",
+                                                                                                                                                                    "value": 1,
+                                                                                                                                                                    "children": [
+                                                                                                                                                                        {
+                                                                                                                                                                            "name": "[k] get_kprobe",
+                                                                                                                                                                            "value": 1,
+                                                                                                                                                                            "children": []
+                                                                                                                                                                        }
+                                                                                                                                                                    ]
+                                                                                                                                                                }
+                                                                                                                                                            ]
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "name": "[m] /usr/src/app/productcatalogservice + 0x007d02d6",
+                                                                    "value": 1,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "[m] /usr/src/app/productcatalogservice + 0x007ebc25",
+                                                                            "value": 1,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "[m] /usr/src/app/productcatalogservice + 0x005126ac",
+                                                                                    "value": 1,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "[m] /usr/src/app/productcatalogservice + 0x00512c93",
+                                                                                            "value": 1,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "[m] /usr/src/app/productcatalogservice + 0x00513625",
+                                                                                                    "value": 1,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "[m] /usr/src/app/productcatalogservice + 0x00513cd2",
+                                                                                                            "value": 1,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "[m] /usr/src/app/productcatalogservice + 0x00538089",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "[m] /usr/src/app/productcatalogservice + 0x005381ef",
+                                                                                                                            "value": 1,
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "name": "[m] /usr/src/app/productcatalogservice + 0x00529678",
+                                                                                                                                    "value": 1,
+                                                                                                                                    "children": [
+                                                                                                                                        {
+                                                                                                                                            "name": "[m] /usr/src/app/productcatalogservice + 0x00534552",
+                                                                                                                                            "value": 1,
+                                                                                                                                            "children": [
+                                                                                                                                                {
+                                                                                                                                                    "name": "[m] /usr/src/app/productcatalogservice + 0x00534a25",
+                                                                                                                                                    "value": 1,
+                                                                                                                                                    "children": [
+                                                                                                                                                        {
+                                                                                                                                                            "name": "[m] /usr/src/app/productcatalogservice + 0x0051f2fd",
+                                                                                                                                                            "value": 1,
+                                                                                                                                                            "children": [
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "runtime.systemstack.abi0",
+                                                                                                                                                                    "value": 1,
+                                                                                                                                                                    "children": [
+                                                                                                                                                                        {
+                                                                                                                                                                            "name": "[m] /usr/src/app/productcatalogservice + 0x00442b13",
+                                                                                                                                                                            "value": 1,
+                                                                                                                                                                            "children": [
+                                                                                                                                                                                {
+                                                                                                                                                                                    "name": "[m] /usr/src/app/productcatalogservice + 0x0043ebd6",
+                                                                                                                                                                                    "value": 1,
+                                                                                                                                                                                    "children": [
+                                                                                                                                                                                        {
+                                                                                                                                                                                            "name": "[m] /usr/src/app/productcatalogservice + 0x0043e6d8",
+                                                                                                                                                                                            "value": 1,
+                                                                                                                                                                                            "children": [
+                                                                                                                                                                                                {
+                                                                                                                                                                                                    "name": "[m] /usr/src/app/productcatalogservice + 0x0040dc69",
+                                                                                                                                                                                                    "value": 1,
+                                                                                                                                                                                                    "children": [
+                                                                                                                                                                                                        {
+                                                                                                                                                                                                            "name": "[m] /usr/src/app/productcatalogservice + 0x00433c9a",
+                                                                                                                                                                                                            "value": 1,
+                                                                                                                                                                                                            "children": []
+                                                                                                                                                                                                        }
+                                                                                                                                                                                                    ]
+                                                                                                                                                                                                }
+                                                                                                                                                                                            ]
+                                                                                                                                                                                        }
+                                                                                                                                                                                    ]
+                                                                                                                                                                                }
+                                                                                                                                                                            ]
+                                                                                                                                                                        }
+                                                                                                                                                                    ]
+                                                                                                                                                                }
+                                                                                                                                                            ]
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "runtime.main",
+                    "value": 1,
+                    "children": [
+                        {
+                            "name": "runtime.doInit",
+                            "value": 1,
+                            "children": [
+                                {
+                                    "name": "runtime.doInit",
+                                    "value": 1,
+                                    "children": [
+                                        {
+                                            "name": "runtime.doInit",
+                                            "value": 1,
+                                            "children": [
+                                                {
+                                                    "name": "runtime.doInit",
+                                                    "value": 1,
+                                                    "children": [
+                                                        {
+                                                            "name": "runtime.doInit",
+                                                            "value": 1,
+                                                            "children": [
+                                                                {
+                                                                    "name": "runtime.doInit",
+                                                                    "value": 1,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "runtime.doInit",
+                                                                            "value": 1,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "google.golang.org/grpc/grpclog.init.0",
+                                                                                    "value": 1,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "google.golang.org/grpc/grpclog.newLoggerV2",
+                                                                                            "value": 1,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "os.Getenv",
+                                                                                                    "value": 1,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "syscall.Getenv",
+                                                                                                            "value": 1,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "sync.(*Once).doSlow",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "syscall.copyenv",
+                                                                                                                            "value": 1,
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "name": "aeshashbody",
+                                                                                                                                    "value": 1,
+                                                                                                                                    "children": []
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "net.(*Resolver).goLookupIPCNAMEOrder.func3.2",
+                    "value": 1,
+                    "children": [
+                        {
+                            "name": "net.(*Resolver).goLookupIPCNAMEOrder.func3.1",
+                            "value": 1,
+                            "children": [
+                                {
+                                    "name": "net.(*Resolver).tryOneName",
+                                    "value": 1,
+                                    "children": [
+                                        {
+                                            "name": "net.(*Resolver).exchange",
+                                            "value": 1,
+                                            "children": [
+                                                {
+                                                    "name": "net.dnsPacketRoundTrip",
+                                                    "value": 1,
+                                                    "children": [
+                                                        {
+                                                            "name": "net.(*UDPConn).Read",
+                                                            "value": 1,
+                                                            "children": [
+                                                                {
+                                                                    "name": "net.(*conn).Read",
+                                                                    "value": 1,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "net.(*netFD).Read",
+                                                                            "value": 1,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "internal/poll.(*FD).Read",
+                                                                                    "value": 1,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "syscall.read",
+                                                                                            "value": 1,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "syscall.Syscall",
+                                                                                                    "value": 1,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "runtime/internal/syscall.Syscall6",
+                                                                                                            "value": 1,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "[k] kretprobe_trampoline",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "[k] trampoline_handler",
+                                                                                                                            "value": 1,
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "name": "[k] __kretprobe_trampoline_handler",
+                                                                                                                                    "value": 1,
+                                                                                                                                    "children": [
+                                                                                                                                        {
+                                                                                                                                            "name": "[k] __lock_text_start",
+                                                                                                                                            "value": 1,
+                                                                                                                                            "children": []
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "0x00007f17f2b17a50",
+            "value": 10,
+            "children": [
+                {
+                    "name": "runtime.mstart.abi0",
+                    "value": 10,
+                    "children": [
+                        {
+                            "name": "runtime.mstart0",
+                            "value": 10,
+                            "children": [
+                                {
+                                    "name": "runtime.mstart1",
+                                    "value": 10,
+                                    "children": [
+                                        {
+                                            "name": "runtime.sysmon",
+                                            "value": 10,
+                                            "children": [
+                                                {
+                                                    "name": "runtime.retake",
+                                                    "value": 9,
+                                                    "children": [
+                                                        {
+                                                            "name": "runtime.preemptone",
+                                                            "value": 8,
+                                                            "children": [
+                                                                {
+                                                                    "name": "runtime.tgkill.abi0",
+                                                                    "value": 6,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "[k] entry_SYSCALL_64_after_hwframe",
+                                                                            "value": 6,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "[k] do_syscall_64",
+                                                                                    "value": 6,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "[k] __x64_sys_tgkill",
+                                                                                            "value": 6,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "[k] do_tkill",
+                                                                                                    "value": 6,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "[k] do_send_specific",
+                                                                                                            "value": 6,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "[k] do_send_sig_info",
+                                                                                                                    "value": 5,
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "[k] __lock_text_start",
+                                                                                                                            "value": 5,
+                                                                                                                            "children": []
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "[k] __task_pid_nr_ns",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": []
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "name": "[m] /usr/src/app/productcatalogservice + 0x0046b127",
+                                                                    "value": 1,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "[k] entry_SYSCALL_64_after_hwframe",
+                                                                            "value": 1,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "[k] syscall_exit_to_user_mode",
+                                                                                    "value": 1,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "[k] __audit_syscall_exit",
+                                                                                            "value": 1,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "[k] kfree",
+                                                                                                    "value": 1,
+                                                                                                    "children": []
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "runtime.netpoll",
+                                                    "value": 1,
+                                                    "children": [
+                                                        {
+                                                            "name": "runtime/internal/syscall.Syscall6",
+                                                            "value": 1,
+                                                            "children": [
+                                                                {
+                                                                    "name": "[k] entry_SYSCALL_64_after_hwframe",
+                                                                    "value": 1,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "[k] do_syscall_64",
+                                                                            "value": 1,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "[k] __x64_sys_epoll_pwait",
+                                                                                    "value": 1,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "[k] do_epoll_wait",
+                                                                                            "value": 1,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "[k] ep_poll",
+                                                                                                    "value": 1,
+                                                                                                    "children": []
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "runtime.mcall",
+            "value": 1,
+            "children": [
+                {
+                    "name": "runtime.goexit0",
+                    "value": 1,
+                    "children": [
+                        {
+                            "name": "runtime.schedule",
+                            "value": 1,
+                            "children": [
+                                {
+                                    "name": "runtime.findRunnable",
+                                    "value": 1,
+                                    "children": [
+                                        {
+                                            "name": "runtime.runSafePointFn",
+                                            "value": 1,
+                                            "children": [
+                                                {
+                                                    "name": "runtime.lock2",
+                                                    "value": 1,
+                                                    "children": [
+                                                        {
+                                                            "name": "runtime.futex.abi0",
+                                                            "value": 1,
+                                                            "children": [
+                                                                {
+                                                                    "name": "[k] entry_SYSCALL_64_after_hwframe",
+                                                                    "value": 1,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "[k] do_syscall_64",
+                                                                            "value": 1,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "[k] __x64_sys_futex",
+                                                                                    "value": 1,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "[k] do_futex",
+                                                                                            "value": 1,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "[k] futex_wait",
+                                                                                                    "value": 1,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "[k] futex_wait_queue_me",
+                                                                                                            "value": 1,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "[k] schedule",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "[k] __schedule",
+                                                                                                                            "value": 1,
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "name": "[k] finish_task_switch",
+                                                                                                                                    "value": 1,
+                                                                                                                                    "children": []
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "0x000055b1e66b2601",
+            "value": 1,
+            "children": [
+                {
+                    "name": "0x000055b1e6683e34",
+                    "value": 1,
+                    "children": [
+                        {
+                            "name": "0x000055b1e6691148",
+                            "value": 1,
+                            "children": [
+                                {
+                                    "name": "0x000055b1e6a38a54",
+                                    "value": 1,
+                                    "children": [
+                                        {
+                                            "name": "0x000055b1e69852f3",
+                                            "value": 1,
+                                            "children": [
+                                                {
+                                                    "name": "0x000055b1e6998acf",
+                                                    "value": 1,
+                                                    "children": [
+                                                        {
+                                                            "name": "0x000055b1e69911fe",
+                                                            "value": 1,
+                                                            "children": [
+                                                                {
+                                                                    "name": "0x000055b1e6993be5",
+                                                                    "value": 1,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "0x000055b1e6992633",
+                                                                            "value": 1,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "0x000055b1e6993905",
+                                                                                    "value": 1,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "0x000055b1e6997b7d",
+                                                                                            "value": 1,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "0x000055b1e68f58e6",
+                                                                                                    "value": 1,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "0x000055b1e68e26d9",
+                                                                                                            "value": 1,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "0x000055b1e68e2b32",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "0x000055b1e6728ab4",
+                                                                                                                            "value": 1,
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "name": "0x000055b1e672909b",
+                                                                                                                                    "value": 1,
+                                                                                                                                    "children": [
+                                                                                                                                        {
+                                                                                                                                            "name": "0x000055b1e66fdd3a",
+                                                                                                                                            "value": 1,
+                                                                                                                                            "children": [
+                                                                                                                                                {
+                                                                                                                                                    "name": "0x000055b1e66fea5e",
+                                                                                                                                                    "value": 1,
+                                                                                                                                                    "children": [
+                                                                                                                                                        {
+                                                                                                                                                            "name": "0x000055b1e664e2ae",
+                                                                                                                                                            "value": 1,
+                                                                                                                                                            "children": [
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "[k] entry_SYSCALL_64_after_hwframe",
+                                                                                                                                                                    "value": 1,
+                                                                                                                                                                    "children": [
+                                                                                                                                                                        {
+                                                                                                                                                                            "name": "[k] do_syscall_64",
+                                                                                                                                                                            "value": 1,
+                                                                                                                                                                            "children": [
+                                                                                                                                                                                {
+                                                                                                                                                                                    "name": "[k] __do_sys_newfstatat",
+                                                                                                                                                                                    "value": 1,
+                                                                                                                                                                                    "children": [
+                                                                                                                                                                                        {
+                                                                                                                                                                                            "name": "[k] cp_new_stat",
+                                                                                                                                                                                            "value": 1,
+                                                                                                                                                                                            "children": [
+                                                                                                                                                                                                {
+                                                                                                                                                                                                    "name": "[k] _copy_to_user",
+                                                                                                                                                                                                    "value": 1,
+                                                                                                                                                                                                    "children": [
+                                                                                                                                                                                                        {
+                                                                                                                                                                                                            "name": "[k] copy_user_enhanced_fast_string",
+                                                                                                                                                                                                            "value": 1,
+                                                                                                                                                                                                            "children": []
+                                                                                                                                                                                                        }
+                                                                                                                                                                                                    ]
+                                                                                                                                                                                                }
+                                                                                                                                                                                            ]
+                                                                                                                                                                                        }
+                                                                                                                                                                                    ]
+                                                                                                                                                                                }
+                                                                                                                                                                            ]
+                                                                                                                                                                        }
+                                                                                                                                                                    ]
+                                                                                                                                                                }
+                                                                                                                                                            ]
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "0x000055b81d957601",
+            "value": 1,
+            "children": [
+                {
+                    "name": "0x000055b81d928e34",
+                    "value": 1,
+                    "children": [
+                        {
+                            "name": "0x000055b81d936148",
+                            "value": 1,
+                            "children": [
+                                {
+                                    "name": "0x000055b81dcdda54",
+                                    "value": 1,
+                                    "children": [
+                                        {
+                                            "name": "0x000055b81dc2a2f3",
+                                            "value": 1,
+                                            "children": [
+                                                {
+                                                    "name": "0x000055b81dc3dacf",
+                                                    "value": 1,
+                                                    "children": [
+                                                        {
+                                                            "name": "0x000055b81dc361fe",
+                                                            "value": 1,
+                                                            "children": [
+                                                                {
+                                                                    "name": "0x000055b81dc38be5",
+                                                                    "value": 1,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "0x000055b81dc37633",
+                                                                            "value": 1,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "0x000055b81dc38905",
+                                                                                    "value": 1,
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "0x000055b81dc3cbca",
+                                                                                            "value": 1,
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "0x000055b81db9a8e6",
+                                                                                                    "value": 1,
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "0x000055b81db876ad",
+                                                                                                            "value": 1,
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "0x000055b81d9415d0",
+                                                                                                                    "value": 1,
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "0x000055b81d9414c0",
+                                                                                                                            "value": 1,
+                                                                                                                            "children": []
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

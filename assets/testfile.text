@@ -1,0 +1,316 @@
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;[m] /lib/ld-musl-x86_64.so.1 + 0x000495f0;runtime.sigtramp.abi0;runtime.sigtrampgo;runtime.sigfwdgo
+
+
+Samples: 10000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts
+
+
+Samples: 20402
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;runtime.asyncPreempt.abi0;runtime.mcall;runtime.gopreempt_m;runtime.goschedImpl;runtime.schedule;runtime.gogo.abi0
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_common_interrupt;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_apic_timer_interrupt;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] schedule;[k] __schedule;[k] finish_task_switch;[k] put_task_stack;[k] account_kernel_stack
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;[m] /lib/ld-musl-x86_64.so.1 + 0x000495f0;runtime.sigtramp.abi0;runtime.sigtrampgo;runtime.sighandler;runtime.doSigPreempt;runtime.isAsyncSafePoint;runtime.pcdatavalue2;runtime.(*moduledata).textAddr
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;[m] /lib/ld-musl-x86_64.so.1 + 0x000495f9;[k] entry_SYSCALL_64_after_hwframe;[k] do_syscall_64;[k] __x64_sys_rt_sigreturn;[k] __set_current_blocked
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_reschedule_ipi;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] arch_do_signal;[k] get_signal
+
+
+Samples: 210000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;runtime.cgoSigtramp.abi0;[k] asm_sysvec_reschedule_ipi;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] arch_do_signal;[k] signal_setup_done;[k] __set_current_blocked
+
+
+Samples: 100000
+
+Stack Trace: 0x00007f17f2b17a50;runtime.mstart.abi0;runtime.mstart0;runtime.mstart1;runtime.sysmon;runtime.retake;runtime.preemptone
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_apic_timer_interrupt;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] arch_do_signal;[k] get_signal
+
+
+Samples: 200000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;runtime.asyncPreempt.abi0;runtime.mcall;runtime.gopreempt_m;runtime.goschedImpl;runtime.schedule;runtime.execute;runtime.casgstatus;runtime.(*timeHistogram).record
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;runtime.cgoSigtramp.abi0;[k] asm_sysvec_reschedule_ipi;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] arch_do_signal;[k] fpu__clear
+
+
+Samples: 100000
+
+Stack Trace: 0x00007f17f2b17a50;runtime.mstart.abi0;runtime.mstart0;runtime.mstart1;runtime.sysmon;runtime.retake;runtime.preemptone;runtime.tgkill.abi0;[k] entry_SYSCALL_64_after_hwframe;[k] do_syscall_64;[k] __x64_sys_tgkill;[k] do_tkill;[k] do_send_specific;[k] do_send_sig_info;[k] __lock_text_start
+
+
+Samples: 300000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts
+
+
+Samples: 20352
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_call_function_single;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;[m] /lib/ld-musl-x86_64.so.1 + 0x000495f0;runtime.sigtramp.abi0;runtime.sigtrampgo;runtime.sighandler;runtime.doSigPreempt;runtime.isAsyncSafePoint;runtime.findfunc
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;[m] /lib/ld-musl-x86_64.so.1 + 0x000495f0;runtime.sigtramp.abi0;runtime.sigtrampgo;runtime.sighandler;runtime.isAbortPC;runtime.findfunc
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_call_function_single;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] schedule
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_apic_timer_interrupt;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] schedule;[k] __schedule;[k] finish_task_switch
+
+
+Samples: 100000
+
+Stack Trace: 0x00007f17f2b17a50;runtime.mstart.abi0;runtime.mstart0;runtime.mstart1;runtime.sysmon;runtime.retake
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_reschedule_ipi;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] schedule;[k] __schedule;[k] finish_task_switch
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;runtime.cgoSigtramp.abi0
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_reschedule_ipi;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare
+
+
+Samples: 100000
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_apic_timer_interrupt;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] arch_do_signal;[k] copy_fpstate_to_sigframe;[k] copy_user_generic_unrolled
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_reschedule_ipi;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] arch_do_signal;[k] copy_fpstate_to_sigframe
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_apic_timer_interrupt;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare
+
+
+Samples: 3
+
+Stack Trace: 0x00007f17f2b17a50;runtime.mstart.abi0;runtime.mstart0;runtime.mstart1;runtime.sysmon;runtime.netpoll;runtime/internal/syscall.Syscall6;[k] entry_SYSCALL_64_after_hwframe;[k] do_syscall_64;[k] __x64_sys_epoll_pwait;[k] do_epoll_wait;[k] ep_poll
+
+
+Samples: 1
+
+2023-08-14T14:39:14.669-0500	info	TracesExporter	{"kind": "exporter", "data_type": "traces", "name": "logging", "resource spans": 1, "spans": 4}
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;runtime.asyncPreempt.abi0;runtime.mcall;runtime.gopreempt_m;runtime.goschedImpl;runtime.schedule
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_call_function_single;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare
+
+
+Samples: 11
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_apic_timer_interrupt;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] schedule;[k] __schedule;[k] finish_task_switch
+
+
+Samples: 7
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;[m] /lib/ld-musl-x86_64.so.1 + 0x000495f9;[k] entry_SYSCALL_64_after_hwframe;[k] do_syscall_64;[k] __x64_sys_rt_sigreturn;[k] restore_sigcontext
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;runtime.asyncPreempt.abi0;runtime.mcall;runtime.gopreempt_m;runtime.goschedImpl;runtime.procyield.abi0
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_apic_timer_interrupt;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare
+
+
+Samples: 4
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;[m] /lib/ld-musl-x86_64.so.1 + 0x000495f0;runtime.sigtramp.abi0;runtime.sigtrampgo;runtime.sighandler;runtime.doSigPreempt;runtime.isAsyncSafePoint;runtime.pcdatavalue2;runtime.pcvalue;runtime.step
+
+
+Samples: 1
+
+Stack Trace: 0x00007f17f2b17a50;runtime.mstart.abi0;runtime.mstart0;runtime.mstart1;runtime.sysmon;runtime.retake;runtime.preemptone;runtime.tgkill.abi0;[k] entry_SYSCALL_64_after_hwframe;[k] do_syscall_64;[k] __x64_sys_tgkill;[k] do_tkill;[k] do_send_specific;[k] __task_pid_nr_ns
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_call_function_single;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] schedule;[k] __schedule;[k] finish_task_switch
+
+
+Samples: 6
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_reschedule_ipi;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_reschedule_ipi;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] arch_do_signal;[k] get_signal
+
+
+Samples: 2
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_apic_timer_interrupt;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] schedule;[k] __schedule;[k] finish_task_switch;[k] put_task_stack;[k] account_kernel_stack
+
+
+Samples: 2
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;[m] /lib/ld-musl-x86_64.so.1 + 0x000495f0;runtime.sigtramp.abi0;runtime.sigtrampgo;runtime.sighandler;runtime.doSigPreempt;runtime.isAsyncSafePoint
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts
+
+
+Samples: 20415
+
+Stack Trace: 0x00007f17f2b17a50;runtime.mstart.abi0;runtime.mstart0;runtime.mstart1;runtime.sysmon;runtime.retake;runtime.preemptone;runtime.tgkill.abi0;[k] entry_SYSCALL_64_after_hwframe;[k] do_syscall_64;[k] __x64_sys_tgkill;[k] do_tkill;[k] do_send_specific;[k] do_send_sig_info;[k] __lock_text_start
+
+
+Samples: 2
+
+Stack Trace: runtime.mcall;runtime.goexit0;runtime.schedule;runtime.findRunnable;runtime.runSafePointFn;runtime.lock2;runtime.futex.abi0;[k] entry_SYSCALL_64_after_hwframe;[k] do_syscall_64;[k] __x64_sys_futex;[k] do_futex;[k] futex_wait;[k] futex_wait_queue_me;[k] schedule;[k] __schedule;[k] finish_task_switch
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;runtime.gcBgMarkWorker;runtime.systemstack.abi0;runtime.gcMarkDone.func1;runtime.gcWriteBarrierCX;runtime.gcWriteBarrier
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_reschedule_ipi;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] arch_do_signal;[k] get_signal
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_reschedule_ipi;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] arch_do_signal;[k] copy_siginfo_to_user;[k] _copy_to_user;[k] copy_user_generic_unrolled
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;[m] /lib/ld-musl-x86_64.so.1 + 0x000495f0;runtime.sigtramp.abi0;runtime.sigtrampgo;runtime.sighandler;runtime.doSigPreempt;runtime.isAsyncSafePoint;runtime.funcname;[m] /usr/src/app/productcatalogservice + 0x00404605
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts
+
+
+Samples: 12065
+
+2023-08-14T14:39:14.902-0500	info	LogsExporter	{"kind": "exporter", "data_type": "logs", "name": "logging", "resource logs": 1, "log records": 1}
+Stack Trace: runtime.goexit.abi0;runtime.gcBgMarkWorker;runtime.gcMarkDone;runtime.systemstack.abi0;runtime.gcMarkTermination.func4;runtime.forEachP;runtime.gcMarkTermination.func4.1;runtime.(*mcache).prepareForSweep;runtime.(*mcache).releaseAll
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_apic_timer_interrupt;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] schedule;[k] __schedule;[k] finish_task_switch
+
+
+Samples: 6
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;runtime.asyncPreempt.abi0;runtime.mcall;runtime.gopreempt_m;runtime.goschedImpl;runtime.schedule;runtime.findRunnable
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*acBalancerWrapper).Connect.func2;google.golang.org/grpc.(*addrConn).connect;google.golang.org/grpc.(*addrConn).resetTransport;google.golang.org/grpc.(*addrConn).tryAllAddrs;google.golang.org/grpc.(*addrConn).createTransport;google.golang.org/grpc/internal/transport.newHTTP2Client;net.(*TCPConn).Write;net.(*conn).Write;net.(*netFD).Write;internal/poll.(*FD).Write;syscall.write;syscall.Syscall;runtime/internal/syscall.Syscall6;[k] entry_SYSCALL_64_after_hwframe;[k] do_syscall_64;[k] __x64_sys_write;[k] ftrace_trampoline;[k] ftrace_ops_assist_func;[k] kprobe_ftrace_handler;[k] get_kprobe
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_call_function_single;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare
+
+
+Samples: 3
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_apic_timer_interrupt;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare
+
+
+Samples: 6
+
+Stack Trace: 0x00007f17f2b17a50;runtime.mstart.abi0;runtime.mstart0;runtime.mstart1;runtime.sysmon;runtime.retake;runtime.preemptone;[m] /usr/src/app/productcatalogservice + 0x0046b127;[k] entry_SYSCALL_64_after_hwframe;[k] syscall_exit_to_user_mode;[k] __audit_syscall_exit;[k] kfree
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_call_function_single;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare;[k] schedule;[k] __schedule;[k] finish_task_switch
+
+
+Samples: 2
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*Server).serveStreams.func1.2;google.golang.org/grpc.(*Server).handleStream;google.golang.org/grpc.(*Server).processUnaryRPC;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler;go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc.UnaryServerInterceptor.func1;github.com/opentelemetry/opentelemetry-demo/src/productcatalogservice/genproto/oteldemo._ProductCatalogService_ListProducts_Handler.func1;main.(*productCatalog).ListProducts;[k] asm_sysvec_reschedule_ipi;[k] irqentry_exit_to_user_mode;[k] exit_to_user_mode_prepare
+
+
+Samples: 1
+
+Stack Trace: 0x000055b1e66b2601;0x000055b1e6683e34;0x000055b1e6691148;0x000055b1e6a38a54;0x000055b1e69852f3;0x000055b1e6998acf;0x000055b1e69911fe;0x000055b1e6993be5;0x000055b1e6992633;0x000055b1e6993905;0x000055b1e6997b7d;0x000055b1e68f58e6;0x000055b1e68e26d9;0x000055b1e68e2b32;0x000055b1e6728ab4;0x000055b1e672909b;0x000055b1e66fdd3a;0x000055b1e66fea5e;0x000055b1e664e2ae;[k] entry_SYSCALL_64_after_hwframe;[k] do_syscall_64;[k] __do_sys_newfstatat;[k] cp_new_stat;[k] _copy_to_user;[k] copy_user_enhanced_fast_string
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;google.golang.org/grpc.(*acBalancerWrapper).Connect.func2;google.golang.org/grpc.(*addrConn).connect;google.golang.org/grpc.(*addrConn).resetTransport;google.golang.org/grpc.(*addrConn).tryAllAddrs;google.golang.org/grpc.(*addrConn).createTransport;google.golang.org/grpc/internal/transport.newHTTP2Client;[m] /usr/src/app/productcatalogservice + 0x007d02d6;[m] /usr/src/app/productcatalogservice + 0x007ebc25;[m] /usr/src/app/productcatalogservice + 0x005126ac;[m] /usr/src/app/productcatalogservice + 0x00512c93;[m] /usr/src/app/productcatalogservice + 0x00513625;[m] /usr/src/app/productcatalogservice + 0x00513cd2;[m] /usr/src/app/productcatalogservice + 0x00538089;[m] /usr/src/app/productcatalogservice + 0x005381ef;[m] /usr/src/app/productcatalogservice + 0x00529678;[m] /usr/src/app/productcatalogservice + 0x00534552;[m] /usr/src/app/productcatalogservice + 0x00534a25;[m] /usr/src/app/productcatalogservice + 0x0051f2fd;runtime.systemstack.abi0;[m] /usr/src/app/productcatalogservice + 0x00442b13;[m] /usr/src/app/productcatalogservice + 0x0043ebd6;[m] /usr/src/app/productcatalogservice + 0x0043e6d8;[m] /usr/src/app/productcatalogservice + 0x0040dc69;[m] /usr/src/app/productcatalogservice + 0x00433c9a
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;runtime.main;runtime.doInit;runtime.doInit;runtime.doInit;runtime.doInit;runtime.doInit;runtime.doInit;runtime.doInit;google.golang.org/grpc/grpclog.init.0;google.golang.org/grpc/grpclog.newLoggerV2;os.Getenv;syscall.Getenv;sync.(*Once).doSlow;syscall.copyenv;aeshashbody
+
+
+Samples: 1
+
+Stack Trace: runtime.goexit.abi0;net.(*Resolver).goLookupIPCNAMEOrder.func3.2;net.(*Resolver).goLookupIPCNAMEOrder.func3.1;net.(*Resolver).tryOneName;net.(*Resolver).exchange;net.dnsPacketRoundTrip;net.(*UDPConn).Read;net.(*conn).Read;net.(*netFD).Read;internal/poll.(*FD).Read;syscall.read;syscall.Syscall;runtime/internal/syscall.Syscall6;[k] kretprobe_trampoline;[k] trampoline_handler;[k] __kretprobe_trampoline_handler;[k] __lock_text_start
+
+
+Samples: 1
+
+Stack Trace: 0x000055b81d957601;0x000055b81d928e34;0x000055b81d936148;0x000055b81dcdda54;0x000055b81dc2a2f3;0x000055b81dc3dacf;0x000055b81dc361fe;0x000055b81dc38be5;0x000055b81dc37633;0x000055b81dc38905;0x000055b81dc3cbca;0x000055b81db9a8e6;0x000055b81db876ad;0x000055b81d9415d0;0x000055b81d9414c0
+
+
+Samples: 1
