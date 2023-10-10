@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cytoscape Test</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.css">
+
+    <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+    <script src="https://unpkg.com/dagre@0.7.4/dist/dagre.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cytoscape/cytoscape.js-dagre/cytoscape-dagre.js"></script>
+    <script src="https://unpkg.com/cytoscape-qtip@2.7.0/cytoscape-qtip.js"></script>
+
+    <style>
+        body {
+            font-family: helvetica;
+            font-size: 14px;
+        }
+
+        #cy {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        h1 {
+            opacity: 0.5;
+            font-size: 1em;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 0;
+            border: none;
+            width: 40%;
+            /* Adjust as necessary */
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            /* Ensures child elements don't spill outside the border-radius */
+        }
+
+        .modal-header {
+            background-color: #f6f6f6;
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .modal-header h2 {
+            font-size: 24px;
+            margin: 0;
+            color: #333;
+        }
+
+        .close {
+            color: #888;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 25px;
+        }
+
+        .modal-footer {
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        button {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button.troubleshoot {
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 12px;
+        }
+
+        button.exit {
+            background-color: #eee;
+            color: #555;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="maintitle"></h1>
+    <div id="cy"></div>
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Service Details</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p id="nodeInfo">Node details or any other content will appear here.</p>
+                <!-- Add more content sections as needed -->
+            </div>
+            <div class="modal-footer">
+                <button class="troubleshoot">Troubleshoot</button>
+                <button class="exit">close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        var basePath = "";
+        function buildgraph(model) {
+
+
+            function getImageUrl(nodeType) {
+                switch (nodeType) {
+                    case 'db':
+                        return basePath + 'img/database_enter_icon_155538.png';
+                    case 'service':
+                        return basePath + 'img/setting_two_icon_154854.png';
+                    default:
+                        return basePath + 'img/setting_two_icon_154854.png'; // default image
+                }
+            }
+
+
+            // Modify the node data for image URLs
+            model.nodes.forEach(node => {
+                node.data.imageUrl = getImageUrl(node.data.type);
+            });
+
+            //truncate labels
+            function truncateLabel(fullLabel, maxLength) {
+                if (!fullLabel || typeof fullLabel !== 'string') return ''; // Return an empty string if label is not valid
+                if (fullLabel.length <= maxLength) return fullLabel;
+                return fullLabel.slice(0, maxLength) + '...';
+            }
+
+            model.nodes.forEach(node => {
+                node.data.label = truncateLabel(node.data.fullLabel, 5); // truncate to 10 characters
+            });
+
+            document.getElementById("maintitle").innerHTML = model.title;
+
+            var cy = cytoscape({
+                container: document.getElementById('cy'),
+                elements: {
+                    nodes: model.nodes,
+                    edges: model.edges
+                },
+                style: [
+                    {
+                        selector: 'node',
+                        style: {
+                            'background-color': '#FFF',
+                            'label': 'data(label)',
+                            'color': '#000',
+                            'text-halign': 'right',
+                            'text-valign': 'center',
+                            'text-margin-x': 5, // Adjust this value as needed for desired spacing
+                            'font-size': '12px',
+                            //'text-outline-width': 2,
+                            //'text-outline-color': '#888888',
+                            'shadow-blur': 5,
+                            'shadow-color': '#000',
+                            'shadow-opacity': 0.3,
+                            //'width': 'mapData(requests, 0, 100, 10, 60)',
+                            //'height': 'mapData(requests, 0, 100, 10, 60)',
+                            'width': 50,
+                            'height': 50,
+                            'background-image': 'data(imageUrl)'
+                        }
+                    },
+                    {
+                        selector: 'node[state="ok"]',
+                        style: {
+                            //'background-color': '#44BFA3',
+                            'background-color': 'white',
+                            'border-color': '#44BFA3',
+                            'border-width': 5
+                        }
+                    },
+                    {
+                        selector: 'node[state="trouble"]',
+                        style: {
+                            //'background-color': '#C60C30',
+                            'background-color': 'white',
+                            'border-color': '#C60C30',
+                            'border-width': 5
+                        }
+                    },
+                    {
+                        selector: 'edge',
+                        style: {
+                            'width': 2,
+                            'line-style': 'dotted',
+                            'target-arrow-shape': 'triangle',
+                            'line-color': '#CCC',
+                            'target-arrow-color': '#CCC',
+                            'curve-style': 'bezier'
+                        }
+                    },
+                    {
+                        selector: 'edge[state="ok"]',
+                        style: {
+                            'line-color': '#44BFA3',
+                            'target-arrow-color': '#44BFA3'
+                        }
+                    },
+                    {
+                        selector: 'edge[state="trouble"]',
+                        style: {
+                            'line-color': '#C60C30',
+                            'target-arrow-color': '#C60C30'
+                        }
+                    }
+                ],
+
+                layout: {
+                    name: 'dagre'
+                }
+            });
+
+            // add tooltip
+            cy.nodes().qtip({
+                content: function () {
+                    return this.data('fullLabel');  // Show the full label in the tooltip
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                style: {
+                    classes: 'qtip-bootstrap',  // Use the Bootstrap theme for qTip
+                    tip: {
+                        width: 16,
+                        height: 8
+                    },
+                    'z-index': 50  // Increase the z-index value if needed
+
+                },
+                show: {
+                    event: 'mouseover'  // show on mouseover
+                },
+                hide: {
+                    event: 'mouseout click'   // hide on mouseout
+                }
+            });
+
+            // Get modal and elements
+            var modal = document.getElementById('infoModal');
+            var span = document.getElementsByClassName("close")[0];
+
+            // When a node is clicked, open the modal and display the node's information
+            cy.on('tap', 'node', function (evt) {
+                var node = evt.target;
+                document.getElementById("nodeInfo").innerText = `Service: ${node.data('fullLabel')} \n  Alerts: ${node.data('alerts') || 0}  `;
+                modal.style.display = "block";
+            });
+
+            // When the close button is clicked, close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When anywhere outside of the modal is clicked, close it
+            window.onclick = function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            }// Get modal and elements
+
+
+
+        }
+
+        if (window.Retool) {
+
+            window.Retool.subscribe(function(model) {
+
+                basePath = "https://prequel.dev/app-assets/";
+                buildgraph(model);
+
+            });
+
+        }
+        else {
+
+            // Model data for testing. 
+            var model = {
+                "title": "Dependency Graph",
+                "nodes": [
+                    { data: { id: 'n0', fullLabel: 'frontend proxy', state: 'trouble', alerts: 2 } },
+                    { data: { id: 'n1', fullLabel: 'frontend', state: 'trouble' } },
+                    { data: { id: 'n2', fullLabel: 'checkout', state: 'ok' } },
+                    { data: { id: 'n3', fullLabel: 'payment', state: 'ok' } },
+                    { data: { id: 'n4', fullLabel: 'email', state: 'ok' } },
+                    { data: { id: 'n5', fullLabel: 'currency', state: 'ok' } },
+                    { data: { id: 'n6', fullLabel: 'cart', state: 'ok' } },
+                    { data: { id: 'n7', fullLabel: 'fraud detection', state: 'ok' } },
+                    { data: { id: 'n8', fullLabel: 'accounting', state: 'ok' } },
+                    { data: { id: 'n9', fullLabel: 'ad', state: 'trouble' } },
+                    { data: { id: 'n10', fullLabel: 'quote', state: 'ok' } },
+                    { data: { id: 'n11', fullLabel: 'product catalog', state: 'ok' } },
+                    { data: { id: 'n12', fullLabel: 'shipping', state: 'ok' } },
+                    { data: { id: 'n13', fullLabel: 'recommendation', state: 'ok' } },
+                    { data: { id: 'n14', fullLabel: 'feature flag', state: 'ok' } },
+                    { data: { id: 'n15', fullLabel: 'feature flag db', state: 'trouble', alerts: 2, type: "db", requests: 70 } },
+                    { data: { id: 'n16', fullLabel: 'cache (redis)', state: 'ok' } },
+                    { data: { id: 'n17', fullLabel: 'queue (kafka)', state: 'ok' } }
+                ],
+                "edges": [
+                    { data: { source: 'n0', target: 'n1', state: 'trouble' } },  // frontend proxy to frontend
+                    { data: { source: 'n0', target: 'n14' } }, // frontend proxy to feature flag store
+                    { data: { source: 'n1', target: 'n2' } },  // frontend to checkout service
+                    { data: { source: 'n1', target: 'n5' } },  // frontend to currency service
+                    { data: { source: 'n1', target: 'n6' } },  // frontend to cart service
+                    { data: { source: 'n1', target: 'n9', state: 'trouble' } },  // frontend to ad service
+                    { data: { source: 'n1', target: 'n11' } }, // frontend to product catalog service
+                    { data: { source: 'n1', target: 'n12' } }, // frontend service to shipping service
+                    { data: { source: 'n1', target: 'n13' } }, // frontend service to recommendation service
+                    { data: { source: 'n2', target: 'n3' } },  // checkout service to payment service
+                    { data: { source: 'n2', target: 'n4' } },  // checkout service to email service
+                    { data: { source: 'n2', target: 'n5' } },  // checkout service to currency service
+                    { data: { source: 'n2', target: 'n6' } },  // checkout service to cart service
+                    { data: { source: 'n2', target: 'n11' } }, // checkout service to product catalog service
+                    { data: { source: 'n2', target: 'n12' } }, // checkout service to shipping service
+                    { data: { source: 'n2', target: 'n17' } }, // checkout service to queue (Kafka)
+                    { data: { source: 'n6', target: 'n14' } }, // cart service to feature flag service
+                    { data: { source: 'n6', target: 'n16' } }, // cart service to cache (redis)
+                    { data: { source: 'n8', target: 'n17' } }, // accounting service to queue (Kafka)
+                    { data: { source: 'n7', target: 'n17' } }, // fraud detection service to queue (Kafka)
+                    { data: { source: 'n9', target: 'n15', state: 'trouble' } }, // ad service to feature flag store
+                    { data: { source: 'n11', target: 'n15' } }, // product catalog service to feature flag store
+                    { data: { source: 'n12', target: 'n10' } },// shipping service to quote service
+                    { data: { source: 'n13', target: 'n11' } }, // recommendation service to product catalog service
+                    { data: { source: 'n13', target: 'n15' } } // recommendation service to feature flag service
+                ]
+
+            };
+
+            buildgraph(model);
+        };
+
+
+    </script>
+</body>
+
+</html>

@@ -216,7 +216,7 @@ function useTestData(scenario) {
 				}
 			]
 		};
-
+ 
 	} // more complex test input
 	else if (scenario == 2){
 
@@ -226,14 +226,39 @@ function useTestData(scenario) {
 	
 }
 
-//grabbing scriptElement to be able to feed into modified version of incendiumFlamegraph
+console.debug("app begins")
+//grabbing scriptElement to be able to fed into modified version of incendiumFlamegraph
 var scriptElement = document.currentScript;
-console.debug("script element: " + scriptElement);
 
-// Initiate the fetch and parsing process
-fetchAndParseData('https://urban-invention-pxpw5jr94wrh9xrx-8080.app.github.dev/assets/testfile.text', () => {
-	
-	console.debug("value of data after callback ....:  " + JSON.stringify(data_forflamegraph));
-	incendiumFlamegraph("hkctthqlqhcubcsgrazymmvaldzllxbq", data_forflamegraph, scriptElement);
+if (true) {
+//if (window.Retool) {
 
-});
+	// window.Retool.subscribe(function(model) {
+
+		useTestData (1);
+		// data_forflamegraph = model
+
+
+		// Initiate the fetch and parsing process
+		// fetchAndParseData('https://urban-invention-pxpw5jr94wrh9xrx-8080.app.github.dev/assets/testfile.text', () => {
+		
+		
+		console.debug("value of data  ....:  " + JSON.stringify(data_forflamegraph));
+		incendiumFlamegraph("hkctthqlqhcubcsgrazymmvaldzllxbq", data_forflamegraph, scriptElement);
+
+//});
+
+	// });
+
+}
+else {
+
+	// Initiate the fetch and parsing process
+	fetchAndParseData('assets/testfile.text', () => {
+		
+		console.debug("value of data after callback ....:  " + JSON.stringify(data_forflamegraph));
+		incendiumFlamegraph("hkctthqlqhcubcsgrazymmvaldzllxbq", data_forflamegraph, scriptElement);
+
+	});
+
+}

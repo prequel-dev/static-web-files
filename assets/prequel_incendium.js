@@ -69,17 +69,18 @@ function incendiumFlamegraph(id, data, scriptElement) {
 
   var styleSeparate = "margin-right: 1.25em;";
 
-  //prequel: Removed unnecessary menu items
   var newElement =
     h("div", { class: "incendium" }, [
+      h("div", { id: chartId }, []),
       h("nav", {}, [
         h("div", {}, [
           h("div", { style: "float: left" }, [
-            //h("a", { class: "incendium", href: downloadAction, id: downloaderId, style: styleSeparate }, ["Download"]),
-            //h("a", { class: "incendium", href: resetZoomAction, style: styleSeparate }, ["Reset zoom"]),
-            //h("a", { class: "incendium", href: clearAction, style: styleSeparate }, ["Clear"])
+            // prequel: Removed unnecessary menu items
+            // h("a", { class: "incendium", href: downloadAction, id: downloaderId, style: styleSeparate }, ["Download"]),
+            // h("a", { class: "incendium", href: resetZoomAction, style: styleSeparate }, ["Reset zoom"]),
+            // h("a", { class: "incendium", href: clearAction, style: styleSeparate }, ["Clear"])
           ]),
-          h("div", { style: "float: right" }, [
+          h("div", { style: "float: left" }, [
             h("form", { class: "incendium", id: formId, style: "display: inline-block important!;" }, [
               h("input", { class: "incendium", id: termId }, []),
               h("a", { class: "incendium", style: "margin-left: 5px", href: searchAction }, ["Search"])
@@ -87,8 +88,8 @@ function incendiumFlamegraph(id, data, scriptElement) {
           ])
         ])
       ]),
-      h("div", { id: chartId }, []),
-      h("div", { id: detailsId }, [])
+      // prequel: removed additional detail bar
+      // h("div", { id: detailsId }, [])
     ]);
 
   // Insert the HTML just before the current script
