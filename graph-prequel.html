@@ -24,11 +24,16 @@
         }
 
         #cy {
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             position: absolute;
             left: 0;
             top: 0;
+            margin:0;
+        }
+
+        #maintitle {
+            display: none;
         }
 
         h1 {
@@ -251,7 +256,20 @@
 
                 layout: {
                     name: 'dagre'
-                }
+                },
+                ready: function () {
+                    console.log("in the ready function")
+                    var nodeId = 'opentelemetry-demo-checkoutservice'; // Replace with the ID of the node you want to focus on
+                    var node = this.$(`#${nodeId}`);
+                    
+                    if (node.length > 0) {
+                      //this.center(node);
+                      this.zoom(0.3); // Set to your preferred zoom level
+                      //console.error('Node found:', nodeId);
+                    } else {
+                      console.error('Node not found:', nodeId);
+                    }
+                  }
             });
 
             // add tooltip
@@ -280,10 +298,14 @@
                 }
             });
 
+            // remove user zoom
+            cy.userZoomingEnabled( false );
+
             // Get modal and elements
             var modal = document.getElementById('infoModal');
             var span = document.getElementsByClassName("close")[0];
 
+          /* disable modal
             // When a node is clicked, open the modal and display the node's information
             cy.on('tap', 'node', function (evt) {
                 var node = evt.target;
@@ -303,7 +325,7 @@
                 }
             }// Get modal and elements
 
-
+            */
 
         }
 
@@ -319,7 +341,7 @@
         }
         else {
 
-            // Model data for testing. 
+            // Model data for testing. Can remove for prod
             var model = {
                 "title": "Dependency Graph",
                 "nodes": [

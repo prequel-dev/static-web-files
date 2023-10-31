@@ -230,13 +230,12 @@ console.debug("app begins")
 //grabbing scriptElement to be able to fed into modified version of incendiumFlamegraph
 var scriptElement = document.currentScript;
 
-if (true) {
-//if (window.Retool) {
+if (window.Retool) {
 
-	// window.Retool.subscribe(function(model) {
+	window.Retool.subscribe(function(model) {
 
-		useTestData (1);
-		// data_forflamegraph = model
+		//useTestData (1);
+		data_forflamegraph = model
 
 
 		// Initiate the fetch and parsing process
@@ -246,10 +245,9 @@ if (true) {
 		console.debug("value of data  ....:  " + JSON.stringify(data_forflamegraph));
 		incendiumFlamegraph("hkctthqlqhcubcsgrazymmvaldzllxbq", data_forflamegraph, scriptElement);
 
-//});
+    });
 
-	// });
-
+	
 }
 else {
 
