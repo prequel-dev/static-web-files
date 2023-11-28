@@ -13,9 +13,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.css">
 
     <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+    <script src="https://unpkg.com/klayjs"></script>
+    <script src="https://unpkg.com/cytoscape-klay@3.1.1/cytoscape-klay.js"></script>
     <script src="https://unpkg.com/dagre@0.7.4/dist/dagre.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cytoscape/cytoscape.js-dagre/cytoscape-dagre.js"></script>
     <script src="https://unpkg.com/cytoscape-qtip@2.7.0/cytoscape-qtip.js"></script>
+
+
 
     <style>
         body {
@@ -175,10 +179,13 @@
             }
 
             model.nodes.forEach(node => {
-                node.data.label = truncateLabel(node.data.fullLabel, 5); // truncate to 10 characters
+                node.data.label = truncateLabel(node.data.fullLabel, 20); // truncate names
             });
 
             document.getElementById("maintitle").innerHTML = model.title;
+          
+            // Register the klay layout
+            cytoscape.use(cytoscapeKlay);
 
             var cy = cytoscape({
                 container: document.getElementById('cy'),
@@ -235,7 +242,7 @@
                             'target-arrow-shape': 'triangle',
                             'line-color': '#CCC',
                             'target-arrow-color': '#CCC',
-                            'curve-style': 'bezier'
+                            'curve-style': 'straight'
                         }
                     },
                     {
@@ -255,7 +262,20 @@
                 ],
 
                 layout: {
-                    name: 'dagre'
+                    name: 'klay',
+                    nodeDimensionsIncludeLabels: true,
+                    //fit: true,
+                    padding: 0,  
+                    animate: false,
+                    klay: {
+                      // Add Klay options here
+                      //aspectRatio: .8,
+                      //layoutHierarchy: true,
+                      //mergeEdges: true,
+                      spacing: 10,
+                      direction: 'RIGHT'
+                    
+                    }
                 },
                 ready: function () {
                     console.log("in the ready function")
@@ -264,7 +284,7 @@
                     
                     if (node.length > 0) {
                       //this.center(node);
-                      this.zoom(0.3); // Set to your preferred zoom level
+                      this.zoom(.5); // Set to your preferred zoom level
                       //console.error('Node found:', nodeId);
                     } else {
                       console.error('Node not found:', nodeId);
@@ -329,20 +349,128 @@
 
         }
 
-        if (window.Retool) {
+        var ran = 0;
 
-            window.Retool.subscribe(function(model) {
+        async function runQuery(model) {
+          
+          if(ran != model.uuid){
+            window.Retool.triggerQuery("getgraphs", { additionalScope: {myid: model.uuid}});
+            ran = model.uuid;
+          } 
+        try{
+          
+          //window.Retool.triggerQuery("gettest");
+          // Access the query results from the temporary state variable
+            // Access the query and its results
+          console.info("the retool object is:" + JSON.stringify(window.Retool));
+          const queryResults = model.results;
+          //const queryResults = window.Retool.context.temporaryState[model.uuid];
+          console.log('Query results for alert uuid' + model.uuid + ':', queryResults);
+          basePath = "https://prequel.dev/app-assets/";
+          buildgraph(queryResults); 
+        } catch (error) {
+            console.error('Query failed:', error);
+          }
+        }
 
-                basePath = "https://prequel.dev/app-assets/";
-                buildgraph(model);
-
+        async function getData() {
+          try {
+            window.Retool.subscribe(function (model) {
+              if (model) {
+                console.info("running Query")
+                runQuery(model)
+              } 
             });
 
+          } catch (error) {
+            console.error('Query failed:', error);
+          }
         }
+
+        if (window.Retool) {
+          // Model data for testing. Can remove for prod
+           
+            var testLabel = "test";
+              
+            /*
+            window.Retool.subscribe(function (model) {
+              console.info("blah: " + JSON.stringify(model))
+              if (model) {
+                id = model.uuid
+                console.info("id from model is ", model);
+                testLabel = id
+                
+                getData(model)
+               
+                
+              } else {
+                console.info("tony:" + JSON.stringify(window.Retool))
+                console.error('UUID is not available in the model');
+              }
+            });
+          
+            */
+          
+            getData();
+          
+            var g = {
+                "title": "Dependency Graph",
+                "nodes": [
+                    { data: { id: 'n0', fullLabel: testLabel, state: 'trouble', alerts: 2 } },
+                    { data: { id: 'n1', fullLabel: 'frontend', state: 'trouble' } },
+                    { data: { id: 'n2', fullLabel: 'checkout', state: 'ok' } },
+                    { data: { id: 'n3', fullLabel: 'payment', state: 'ok' } },
+                    { data: { id: 'n4', fullLabel: 'email', state: 'ok' } },
+                    { data: { id: 'n5', fullLabel: 'currency', state: 'ok' } },
+                    { data: { id: 'n6', fullLabel: 'cart', state: 'ok' } },
+                    { data: { id: 'n7', fullLabel: 'fraud detection', state: 'ok' } },
+                    { data: { id: 'n8', fullLabel: 'accounting', state: 'ok' } },
+                    { data: { id: 'n9', fullLabel: 'ad', state: 'trouble' } },
+                    { data: { id: 'n10', fullLabel: 'quote', state: 'ok' } },
+                    { data: { id: 'n11', fullLabel: 'product catalog', state: 'ok' } },
+                    { data: { id: 'n12', fullLabel: 'shipping', state: 'ok' } },
+                    { data: { id: 'n13', fullLabel: 'recommendation', state: 'ok' } },
+                    { data: { id: 'n14', fullLabel: 'feature flag', state: 'ok' } },
+                    { data: { id: 'n15', fullLabel: 'feature flag db', state: 'trouble', alerts: 2, type: "db", requests: 70 } },
+                    { data: { id: 'n16', fullLabel: 'cache (redis)', state: 'ok' } },
+                    { data: { id: 'n17', fullLabel: 'queue (kafka)', state: 'ok' } }
+                ],
+                "edges": [
+                    { data: { source: 'n0', target: 'n1', state: 'trouble' } },  // frontend proxy to frontend
+                    { data: { source: 'n0', target: 'n14' } }, // frontend proxy to feature flag store
+                    { data: { source: 'n1', target: 'n2' } },  // frontend to checkout service
+                    { data: { source: 'n1', target: 'n5' } },  // frontend to currency service
+                    { data: { source: 'n1', target: 'n6' } },  // frontend to cart service
+                    { data: { source: 'n1', target: 'n9', state: 'trouble' } },  // frontend to ad service
+                    { data: { source: 'n1', target: 'n11' } }, // frontend to product catalog service
+                    { data: { source: 'n1', target: 'n12' } }, // frontend service to shipping service
+                    { data: { source: 'n1', target: 'n13' } }, // frontend service to recommendation service
+                    { data: { source: 'n2', target: 'n3' } },  // checkout service to payment service
+                    { data: { source: 'n2', target: 'n4' } },  // checkout service to email service
+                    { data: { source: 'n2', target: 'n5' } },  // checkout service to currency service
+                    { data: { source: 'n2', target: 'n6' } },  // checkout service to cart service
+                    { data: { source: 'n2', target: 'n11' } }, // checkout service to product catalog service
+                    { data: { source: 'n2', target: 'n12' } }, // checkout service to shipping service
+                    { data: { source: 'n2', target: 'n17' } }, // checkout service to queue (Kafka)
+                    { data: { source: 'n6', target: 'n14' } }, // cart service to feature flag service
+                    { data: { source: 'n6', target: 'n16' } }, // cart service to cache (redis)
+                    { data: { source: 'n8', target: 'n17' } }, // accounting service to queue (Kafka)
+                    { data: { source: 'n7', target: 'n17' } }, // fraud detection service to queue (Kafka)
+                    { data: { source: 'n9', target: 'n15', state: 'trouble' } }, // ad service to feature flag store
+                    { data: { source: 'n11', target: 'n15' } }, // product catalog service to feature flag store
+                    { data: { source: 'n12', target: 'n10' } },// shipping service to quote service
+                    { data: { source: 'n13', target: 'n11' } }, // recommendation service to product catalog service
+                    { data: { source: 'n13', target: 'n15' } } // recommendation service to feature flag service
+                ]
+
+            };
+
+            //buildgraph(g);
+        } 
         else {
 
             // Model data for testing. Can remove for prod
-            var model = {
+            var g = {
                 "title": "Dependency Graph",
                 "nodes": [
                     { data: { id: 'n0', fullLabel: 'frontend proxy', state: 'trouble', alerts: 2 } },
@@ -394,7 +522,7 @@
 
             };
 
-            buildgraph(model);
+            buildgraph(g);
         };
 
 
