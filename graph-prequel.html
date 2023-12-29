@@ -19,8 +19,6 @@
     <script src="https://cdn.jsdelivr.net/gh/cytoscape/cytoscape.js-dagre/cytoscape-dagre.js"></script>
     <script src="https://unpkg.com/cytoscape-qtip@2.7.0/cytoscape-qtip.js"></script>
 
-
-
     <style>
         body {
             font-family: helvetica;
@@ -123,6 +121,31 @@
             color: #555;
             border-radius: 12px;
         }
+
+        #legend {
+            border: 1px solid #ccc;
+            padding: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+        }
+
+        .legend-item {
+            margin-bottom: 5px;
+        }
+
+        .legend-color {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .legend-label {
+            vertical-align: top;
+        }
+
     </style>
 </head>
 
@@ -130,6 +153,8 @@
 
     <h1 id="maintitle"></h1>
     <div id="cy"></div>
+    <div id="legend"></div> 
+    </div>
     <div id="infoModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -347,6 +372,81 @@
 
             */
 
+            function updateLegend(model) {
+                let legendHTML = '';
+
+                // Assuming 'namespaces' is an array of namespace names
+                // Adjust this if 'namespaces' has a different structure
+                model.namespaces.forEach(namespace => {
+                    legendHTML += `<div class="legend-item">
+                        <input type="checkbox" id="namespace-${namespace}" name="${namespace}" checked>
+                        <label for="${namespace}">${namespace}</label><br>
+                    </div>`;
+                });
+
+                // Update the legend div
+                document.getElementById('legend').innerHTML = "<p>Namespaces</p>" + legendHTML;
+
+                // Add event listeners to checkboxes
+                model.namespaces.forEach(namespace => {
+                    let checkbox = document.getElementById(`namespace-${namespace}`);
+                    checkbox.addEventListener('change', function() {
+                        toggleNamespace(namespace, checkbox.checked);
+                    });
+                });
+            }
+
+            // Function to show/hide nodes and edges based on namespace
+            function toggleNamespace(namespace, isVisible) {
+                cy.elements().forEach(ele => {
+                    if (ele.data('namespace') === namespace) {
+                        ele.style('display', isVisible ? 'element' : 'none');
+                    }
+                });
+            }
+
+            // Initial legend update
+            updateLegend(model);
+
+
+        }
+
+        var ran = 0;
+
+        async function runQuery(model) {
+          
+          if(ran != model.uuid){
+            window.Retool.triggerQuery("getgraphs", { additionalScope: {myid: model.uuid}});
+            ran = model.uuid;
+          } 
+        try{
+          
+          //window.Retool.triggerQuery("gettest");
+          // Access the query results from the temporary state variable
+            // Access the query and its results
+          console.info("the retool object is:" + JSON.stringify(window.Retool));
+          const queryResults = model.results;
+          //const queryResults = window.Retool.context.temporaryState[model.uuid];
+          console.log('Query results for alert uuid' + model.uuid + ':', queryResults);
+          basePath = "https://prequel.dev/app-assets/";
+          buildgraph(queryResults); 
+        } catch (error) {
+            console.error('Query failed:', error);
+          }
+        }
+
+        async function getData() {
+          try {
+            window.Retool.subscribe(function (model) {
+              if (model) {
+                console.info("running Query")
+                runQuery(model)
+              } 
+            });
+
+          } catch (error) {
+            console.error('Query failed:', error);
+          }
         }
 
         var ran = 0;
@@ -472,25 +572,26 @@
             // Model data for testing. Can remove for prod
             var g = {
                 "title": "Dependency Graph",
+                "namespaces": ["frontend", "backend", "business"],
                 "nodes": [
-                    { data: { id: 'n0', fullLabel: 'frontend proxy', state: 'trouble', alerts: 2 } },
-                    { data: { id: 'n1', fullLabel: 'frontend', state: 'trouble' } },
-                    { data: { id: 'n2', fullLabel: 'checkout', state: 'ok' } },
-                    { data: { id: 'n3', fullLabel: 'payment', state: 'ok' } },
-                    { data: { id: 'n4', fullLabel: 'email', state: 'ok' } },
-                    { data: { id: 'n5', fullLabel: 'currency', state: 'ok' } },
-                    { data: { id: 'n6', fullLabel: 'cart', state: 'ok' } },
-                    { data: { id: 'n7', fullLabel: 'fraud detection', state: 'ok' } },
-                    { data: { id: 'n8', fullLabel: 'accounting', state: 'ok' } },
-                    { data: { id: 'n9', fullLabel: 'ad', state: 'trouble' } },
-                    { data: { id: 'n10', fullLabel: 'quote', state: 'ok' } },
-                    { data: { id: 'n11', fullLabel: 'product catalog', state: 'ok' } },
-                    { data: { id: 'n12', fullLabel: 'shipping', state: 'ok' } },
-                    { data: { id: 'n13', fullLabel: 'recommendation', state: 'ok' } },
-                    { data: { id: 'n14', fullLabel: 'feature flag', state: 'ok' } },
-                    { data: { id: 'n15', fullLabel: 'feature flag db', state: 'trouble', alerts: 2, type: "db", requests: 70 } },
-                    { data: { id: 'n16', fullLabel: 'cache (redis)', state: 'ok' } },
-                    { data: { id: 'n17', fullLabel: 'queue (kafka)', state: 'ok' } }
+                    { data: { id: 'n0', fullLabel: 'frontend proxy', state: 'trouble', alerts: 2, namespace: 'frontend' } },
+                    { data: { id: 'n1', fullLabel: 'frontend', state: 'trouble', namespace: 'frontend' } },
+                    { data: { id: 'n2', fullLabel: 'checkout', state: 'ok', namespace: 'backend' } },
+                    { data: { id: 'n3', fullLabel: 'payment', state: 'ok', namespace: 'backend'  } },
+                    { data: { id: 'n4', fullLabel: 'email', state: 'ok', namespace: 'backend'  } },
+                    { data: { id: 'n5', fullLabel: 'currency', state: 'ok', namespace: 'backend'  } },
+                    { data: { id: 'n6', fullLabel: 'cart', state: 'ok', namespace: 'backend'  } },
+                    { data: { id: 'n7', fullLabel: 'fraud detection', state: 'ok', namespace: 'business'  } },
+                    { data: { id: 'n8', fullLabel: 'accounting', state: 'ok', namespace: 'backend'  } },
+                    { data: { id: 'n9', fullLabel: 'ad', state: 'ok', namespace: 'backend' } },
+                    { data: { id: 'n10', fullLabel: 'quote', state: 'ok', namespace: 'backend'  } },
+                    { data: { id: 'n11', fullLabel: 'product catalog', state: 'ok', namespace: 'backend'  } },
+                    { data: { id: 'n12', fullLabel: 'shipping', state: 'ok', namespace: 'backend'  } },
+                    { data: { id: 'n13', fullLabel: 'recommendation', state: 'ok', namespace: 'backend'  } },
+                    { data: { id: 'n14', fullLabel: 'feature flag', state: 'ok', namespace: 'backend'  } },
+                    { data: { id: 'n15', fullLabel: 'feature flag db', state: 'trouble', alerts: 2, type: "db", requests: 70, namespace: 'backend'  } },
+                    { data: { id: 'n16', fullLabel: 'cache (redis)', state: 'ok', namespace: 'backend'  } },
+                    { data: { id: 'n17', fullLabel: 'queue (kafka)', state: 'ok', namespace: 'backend'  } }
                 ],
                 "edges": [
                     { data: { source: 'n0', target: 'n1', state: 'trouble' } },  // frontend proxy to frontend
@@ -524,6 +625,9 @@
 
             buildgraph(g);
         };
+
+
+        // Call updateLegend() again if the namespaces object changes.
 
 
     </script>
